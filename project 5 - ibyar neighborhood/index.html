@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Ibyar Neighborhood Map</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+    
+    </head>
+
+    <body>
+        
+        <div class="listPlaces">
+            
+            <input placeholder="search" data-bind="textInput: search ,valueUpdate: 'afterkeydown'">
+
+            <ul data-bind="foreach: filteredArray">
+            
+                <li data-bind="text: title, click: getPlace"></li>
+            
+            </ul>
+                
+        </div>
+
+        <div id="map"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/lib/knockout-3.4.2.js"></script>
+        <script src="js/placesData.js"></script>
+        <script src="js/main.js"></script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc1VR9MP8m8z-95tn2MFR26Wynd6wks3o&v=3&callback=initMap" onerror="errorHandling()">
+        </script>
+
+    </body>
+
+</html>
